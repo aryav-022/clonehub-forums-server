@@ -3,7 +3,7 @@ import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import type { Message } from "@prisma/client";
-import { db } from "./lib/db";
+import { db } from "../lib/db";
 import "dotenv/config";
 
 const app: Express = express();
