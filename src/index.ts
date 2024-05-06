@@ -3,7 +3,7 @@ import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import type { Message } from "@prisma/client";
-import { db } from "../lib/db";
+import { db } from "./lib/db";
 import "dotenv/config";
 
 const app: Express = express();
@@ -46,5 +46,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(8000, () => {
-	console.log("Server is running on http://localhost:8000");
+	console.log("Server is running on PORT 8000");
 });
